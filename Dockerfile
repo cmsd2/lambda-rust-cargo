@@ -6,9 +6,9 @@ ENV RUSTUP_HOME=/usr/local/rustup \
     RUST_VERSION=1.39.0
 
 RUN set -eux; \
-    url="https://static.rust-lang.org/rustup/archive/1.19.0/x86_64-unknown-linux-gnu/rustup-init"; \
+    url="https://static.rust-lang.org/rustup/archive/1.20.2/x86_64-unknown-linux-gnu/rustup-init"; \
     curl -o rustup-init "$url"; \
-    echo "36285482ae5c255f2decfab27d32ba19465804cb3ddf5a23e6ff2a7b0f6e0250 *rustup-init" | sha256sum -c -; \
+    echo "e68f193542c68ce83c449809d2cad262cc2bbb99640eb47c58fc1dc58cc30add *rustup-init" | sha256sum -c -; \
     chmod +x rustup-init; \
     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION; \
     rm rustup-init; \
