@@ -2,4 +2,4 @@
 
 cd "$CRATE_DIR"
 
-exec cargo $@
+exec cargo $*
